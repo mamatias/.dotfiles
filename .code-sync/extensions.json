@@ -1,0 +1,31 @@
+{
+    "extensions": [
+        "2gua.rainbow-brackets",
+        "akamud.vscode-theme-onedark",
+        "azemoh.one-monokai",
+        "foxundermoon.shell-format",
+        "GitHub.copilot",
+        "GitHub.github-vscode-theme",
+        "golf1052.code-sync",
+        "GrapeCity.gc-excelviewer",
+        "GulajavaMinistudio.mayukaithemevsc",
+        "in4margaret.compareit",
+        "kuscamara.electron",
+        "ms-azuretools.vscode-docker",
+        "ms-mssql.data-workspace-vscode",
+        "ms-mssql.mssql",
+        "ms-mssql.sql-database-projects-vscode",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode-remote.remote-ssh",
+        "ms-vscode-remote.remote-ssh-edit",
+        "oderwat.indent-rainbow",
+        "ritwickdey.LiveServer",
+        "RobbOwen.synthwave-vscode",
+        "tomoki1207.pdf"
+    ]
+}

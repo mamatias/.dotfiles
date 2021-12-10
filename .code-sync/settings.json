@@ -1,0 +1,34 @@
+{
+    "workbench.colorTheme": "Electron",
+    "workbench.startupEditor": "none",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "mssql.connections": [
+        {
+            "server": "192.168.1.148",
+            "database": "",
+            "authenticationType": "SqlLogin",
+            "user": "sa_wsp",
+            "password": "",
+            "emptyPasswordInput": false,
+            "savePassword": true,
+            "profileName": "sqlserver-nutreco-xRPI"
+        }
+    ],
+    "editor.inlineSuggest.enabled": true,
+    "editor.minimap.enabled": false,
+    "github.copilot.enable": {
+        "*": false,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": true,
+        "sql": false,
+        "python": false
+    },
+    "git.confirmSync": false
+}
