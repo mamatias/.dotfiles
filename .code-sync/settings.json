@@ -30,5 +30,6 @@
         "sql": false,
         "python": false
     },
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true
 }
