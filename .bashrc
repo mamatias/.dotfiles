@@ -72,7 +72,20 @@ if ${use_color} ; then
 	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
 	else
-		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+		# Variables varias para armar el PS1
+		_GRIS1_B=$(tput setab 239)
+		_GRIS2_B=$(tput setab 235)
+		_YELLOW_F=$(tput setaf 178)
+
+		_RESET='\[\e[0m'
+		parse_git_branch() {
+			git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+		}
+		#PS1='\[\033[02;35m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$$(parse_git_branch)\[\033[00m\] '
+		PS1='${_YELLOW_F}${_GRIS1_B}\u@\h\[\e[0m' # Parte de user@hostname
+		PS1+='${_YELLOW_F}${_GRIS2_B} \W\[\e[0m' # Parte del directorio actual
+		PS1+=' \$$(parse_git_branch)'
+		
 	fi
 
 	alias ls='ls --color=auto'
@@ -143,5 +156,11 @@ alias dcdown='docker-compose down'
 alias ll='ls -al'
 
 # EJECUCIONES PREVIAS
-ssh-add ~/.ssh/ghkey2021
+# ssh-add ~/.ssh/ghkey2021
 clear
+
+##-----------------------------------------------------
+## synth-shell-prompt.sh
+if [ -f /home/matias/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source /home/matias/.config/synth-shell/synth-shell-prompt.sh
+fi
